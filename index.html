@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>감자수베지 스케줄</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 캡처 대상(1920x1080) -->
+  <div id="capture" aria-label="감자수베지 스케줄표">
+    <header>
+      <h1>🥔 감자수베지 방송 스케줄</h1>
+      <p class="subtitle">감자튀김들 모여라! 💜</p>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>요일</th>
+          <th>내용</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-body">
+        <!-- 여기만 수정하면 시간표 변경 가능 -->
+        <tr><td>월</td><td>휴방</td></tr>
+        <tr><td>화</td><td>PUBG 🔫</td></tr>
+        <tr><td>수</td><td>종합게임 🎮</td></tr>
+        <tr><td>목</td><td>소통 💬</td></tr>
+        <tr><td>금</td><td>PUBG 🔫</td></tr>
+        <tr><td>토</td><td>랜덤 ✨</td></tr>
+        <tr><td>일</td><td>휴방</td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <span class="tag">#감자</span>
+      <span class="tag">#감자수베지</span>
+      <span class="tag">#감자튀김</span>
+    </footer>
+  </div>
+
+  <!-- 컨트롤 -->
+  <div class="controls">
+    <button id="downloadBtn" type="button">JPG 저장</button>
+    <span class="hint">※ 버튼을 누르면 1920×1080 JPG로 저장돼요</span>
+  </div>
+
+  <!-- html2canvas -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha256-snRZ8bQ4n9eV1jQxv6V0kJ5hVXGmGf6lY9p4m2m2g9w=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

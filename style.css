@@ -1,0 +1,153 @@
+/* 연보라 감성 + 1920x1080 캡처용 */
+:root{
+  --bg1:#f6efff;
+  --bg2:#d8c7ff;
+  --ink:#2a2340;
+  --primary:#6a4cff;
+  --primary2:#8a74ff;
+  --card:rgba(255,255,255,0.72);
+  --line:rgba(106,76,255,0.18);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  background: radial-gradient(900px 500px at 10% 10%, #ffffffaa, transparent 60%),
+              radial-gradient(700px 450px at 85% 20%, #ffffff88, transparent 55%),
+              linear-gradient(135deg, var(--bg1), var(--bg2));
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:24px;
+  color:var(--ink);
+}
+
+#capture{
+  width:1920px;
+  height:1080px;
+  background:
+    radial-gradient(1000px 500px at 30% 20%, #ffffffcc, transparent 55%),
+    radial-gradient(900px 520px at 70% 80%, #ffffff99, transparent 60%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+  padding:70px 90px;
+  border-radius:28px;
+  box-shadow: 0 18px 45px rgba(42,35,64,0.18);
+  position:relative;
+  overflow:hidden;
+}
+
+/* subtle sparkles */
+#capture::before, #capture::after{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 25% 35%, rgba(255,255,255,0.75) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 86% 58%, rgba(255,255,255,0.75) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 40% 78%, rgba(255,255,255,0.85) 0 2px, transparent 3px);
+  opacity:0.35;
+  filter: blur(0.2px);
+  pointer-events:none;
+}
+
+header{
+  text-align:center;
+  margin-bottom:44px;
+}
+
+h1{
+  margin:0;
+  font-size:72px;
+  letter-spacing:-1px;
+  color:var(--primary);
+  text-shadow: 0 6px 18px rgba(106,76,255,0.18);
+}
+
+.subtitle{
+  margin:14px 0 0;
+  font-size:32px;
+  color:var(--primary2);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  border: 2px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  font-size:38px;
+  box-shadow: 0 16px 34px rgba(42,35,64,0.10);
+}
+
+thead{
+  background: linear-gradient(90deg, #7b61ff, #9f86ff);
+  color:#fff;
+}
+
+th, td{
+  padding:26px 22px;
+  text-align:center;
+}
+
+tbody tr:nth-child(even){
+  background: rgba(123,97,255,0.08);
+}
+
+tbody td:first-child{
+  font-weight:800;
+  color:#4a3bc2;
+  width:18%;
+}
+
+footer{
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  padding:10px 16px;
+  border-radius:999px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(106,76,255,0.20);
+  color:#4d3ccf;
+  font-size:22px;
+}
+
+/* controls */
+.controls{
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+#downloadBtn{
+  padding:14px 34px;
+  font-size:20px;
+  border:none;
+  border-radius:14px;
+  background: linear-gradient(90deg, #7b61ff, #9f86ff);
+  color:white;
+  cursor:pointer;
+  box-shadow: 0 10px 22px rgba(106,76,255,0.25);
+}
+
+#downloadBtn:active{ transform: translateY(1px); }
+
+.hint{
+  font-size:14px;
+  opacity:0.8;
+}
