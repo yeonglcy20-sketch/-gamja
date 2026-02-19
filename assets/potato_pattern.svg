@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
   <defs>
     <linearGradient id="pg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#ffe3b0"/>
-      <stop offset="1" stop-color="#f3b56d"/>
+      <stop offset="0" stop-color="#ffe6be"/>
+      <stop offset="1" stop-color="#f2b06a"/>
     </linearGradient>
   </defs>
   <rect width="220" height="220" fill="transparent"/>
-  <g opacity="0.18" transform="translate(18,22)">
+  <g opacity="0.16" transform="translate(18,22)">
     <path d="M60 18
              C42 26, 34 50, 38 74
              C44 110, 74 134, 110 132
@@ -14,11 +14,11 @@
              C162 26, 128 6, 96 10
              C82 12, 68 14, 60 18Z"
           fill="url(#pg)"/>
-    <circle cx="82" cy="70" r="7" fill="#2a2340" opacity="0.8"/>
-    <circle cx="122" cy="70" r="7" fill="#2a2340" opacity="0.8"/>
-    <path d="M96 92 C104 100, 110 100, 118 92" fill="none" stroke="#2a2340" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="82" cy="70" r="7" fill="#2a2340" opacity="0.75"/>
+    <circle cx="122" cy="70" r="7" fill="#2a2340" opacity="0.75"/>
+    <path d="M96 92 C104 100, 110 100, 118 92" fill="none" stroke="#2a2340" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
   </g>
-  <g opacity="0.22">
+  <g opacity="0.18">
     <path d="M28 190 l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#ffffff"/>
     <path d="M188 34 l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#ffffff"/>
   </g>

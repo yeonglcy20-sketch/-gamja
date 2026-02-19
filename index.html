@@ -8,20 +8,18 @@
 </head>
 <body>
 
-  <!-- 캡처 대상(1920x1080) -->
   <div id="capture" aria-label="감자수베지 스케줄표">
     <div class="bg-deco" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"></div>
     <img class="potato-hero" src="assets/potato_character.svg" alt="" />
 
     <header>
-      <div class="badge">💜 WEEKLY</div>
+      <div class="badge">💗 LAVENDER PINK</div>
       <h1>🥔 감자수베지 방송 스케줄</h1>
       <p class="subtitle">감자튀김들 모여라! ✨</p>
     </header>
 
-    <!-- 2/3 : 1/3 레이아웃 -->
     <section class="layout">
-      <!-- LEFT (2/3) -->
       <div class="left">
         <div class="card">
           <div class="card-title">이번 주 한마디</div>
@@ -34,54 +32,24 @@
             <thead>
               <tr>
                 <th>요일</th>
-                <th>내용 (수정 가능)</th>
                 <th>시간 (수정 가능)</th>
+                <th>내용 (수정 가능)</th>
               </tr>
             </thead>
             <tbody id="schedule-body">
-              <!-- 요일은 고정, 내용/시간만 수정 -->
-              <tr>
-                <td class="day">월</td>
-                <td class="editable" contenteditable="true" spellcheck="false">휴방</td>
-                <td class="editable" contenteditable="true" spellcheck="false">-</td>
-              </tr>
-              <tr>
-                <td class="day">화</td>
-                <td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">수</td>
-                <td class="editable" contenteditable="true" spellcheck="false">종합게임 🎮</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">목</td>
-                <td class="editable" contenteditable="true" spellcheck="false">소통 💬</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">금</td>
-                <td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">토</td>
-                <td class="editable" contenteditable="true" spellcheck="false">랜덤 ✨</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">일</td>
-                <td class="editable" contenteditable="true" spellcheck="false">휴방</td>
-                <td class="editable" contenteditable="true" spellcheck="false">-</td>
-              </tr>
+              <tr><td class="day">월</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
+              <tr><td class="day">화</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
+              <tr><td class="day">수</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">종합게임 🎮</td></tr>
+              <tr><td class="day">목</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">소통 💬</td></tr>
+              <tr><td class="day">금</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
+              <tr><td class="day">토</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">랜덤 ✨</td></tr>
+              <tr><td class="day">일</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
             </tbody>
           </table>
-          <div class="mini mini-bottom">※ 내용/시간 칸을 클릭해서 바로 수정 가능</div>
+          <div class="mini mini-bottom">※ 시간/내용 칸을 클릭해서 바로 수정 가능</div>
         </div>
       </div>
 
-      <!-- RIGHT (1/3) -->
       <aside class="right">
         <div class="image-card">
           <div class="image-title">이미지</div>
@@ -114,7 +82,6 @@
     </section>
   </div>
 
-  <!-- 컨트롤(캡처 제외) -->
   <div class="controls">
     <label class="file">
       이미지 선택

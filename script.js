@@ -1,9 +1,4 @@
-// 감자수베지 스케줄 v3
-// - 우측 1/3 이미지(업로드) + placeholder
-// - 내용/시간/문구 contenteditable
-// - '수정내용 저장' 누르면 localStorage 저장/복원
-// - JPG 저장(1920x1080)
-
+// 감자수베지 스케줄 v4 (day/time/content)
 const imagePicker = document.getElementById("imagePicker");
 const userImage = document.getElementById("userImage");
 const placeholder = document.getElementById("imagePlaceholder");
@@ -25,11 +20,9 @@ function setUserImage(dataUrl){
   localStorage.setItem("potato_user_image", dataUrl);
 }
 
-// restore image
 const savedImg = localStorage.getItem("potato_user_image");
 if(savedImg) setUserImage(savedImg);
 
-// pick file
 imagePicker.addEventListener("change", (e) => {
   const file = e.target.files?.[0];
   if(!file) return;
@@ -41,30 +34,28 @@ imagePicker.addEventListener("change", (e) => {
 
 clearBtn.addEventListener("click", () => setUserImage(null));
 
-// Save edits (quote + schedule cells)
 function readSchedule(){
   const rows = Array.from(document.querySelectorAll("#schedule-body tr"));
   return rows.map(r => {
     const day = r.querySelector("td.day")?.textContent?.trim() ?? "";
     const tds = r.querySelectorAll("td");
-    const content = tds[1]?.textContent?.trim() ?? "";
-    const time = tds[2]?.textContent?.trim() ?? "";
-    return { day, content, time };
+    const time = tds[1]?.textContent?.trim() ?? "";
+    const content = tds[2]?.textContent?.trim() ?? "";
+    return { day, time, content };
   });
 }
 
 function applySchedule(data){
   if(!Array.isArray(data)) return;
   const rows = Array.from(document.querySelectorAll("#schedule-body tr"));
-  // keep day fixed; map by day
   const byDay = new Map(data.map(x => [x.day, x]));
   for(const r of rows){
     const day = r.querySelector("td.day")?.textContent?.trim();
     const item = byDay.get(day);
     if(!item) continue;
     const tds = r.querySelectorAll("td");
-    if(tds[1]) tds[1].textContent = item.content ?? "";
-    if(tds[2]) tds[2].textContent = item.time ?? "";
+    if(tds[1]) tds[1].textContent = item.time ?? "";
+    if(tds[2]) tds[2].textContent = item.content ?? "";
   }
 }
 
@@ -85,17 +76,13 @@ function restoreEdits(){
   }
   const s = localStorage.getItem("potato_schedule");
   if(s){
-    try{
-      const data = JSON.parse(s);
-      applySchedule(data);
-    }catch(_){}
+    try{ applySchedule(JSON.parse(s)); }catch(_){}
   }
 }
 restoreEdits();
 
 saveBtn.addEventListener("click", saveEdits);
 
-// JPG download
 downloadBtn.addEventListener("click", async () => {
   const target = document.getElementById("capture");
   downloadBtn.disabled = true;
