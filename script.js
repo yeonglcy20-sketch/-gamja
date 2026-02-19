@@ -87,6 +87,7 @@ downloadBtn.addEventListener("click", async ()=>{
     a.download="감자수베지_스케줄_1920x1080.jpg";
     a.href=canvas.toDataURL("image/jpeg",0.95);
     a.click();
+    document.body.classList.remove("exporting");
   } finally {
     downloadBtn.disabled=false;
     downloadBtn.textContent="JPG 저장";

@@ -34,7 +34,7 @@ body{
   position:relative;
   border-radius:30px;
   overflow:hidden;
-  padding:56px 64px 40px;
+  padding:70px 64px 44px;
   background:
     radial-gradient(1000px 620px at 25% 20%, #ffffffcc, transparent 60%),
     radial-gradient(900px 520px at 80% 82%, #ffffff88, transparent 62%),
@@ -44,7 +44,6 @@ body{
 }
 
 .bg-deco{
-  z-index:0;
   position:absolute;
   inset:0;
   background:
@@ -59,7 +58,6 @@ body{
 }
 
 .sparkles{
-  z-index:1;
   position:absolute;
   inset:-40px;
   background-image:
@@ -76,7 +74,6 @@ body{
 }
 
 .potato-hero{
-  z-index:2;
   position:absolute;
   right:-26px;
   bottom:-50px;
@@ -92,7 +89,7 @@ header{
   text-align:center;
   margin-bottom:16px;
   position:relative;
-  z-index:6;
+  z-index:10;
 }
 
 .badge{
@@ -128,8 +125,6 @@ h1{
 }
 
 .layout{
-  z-index:5;
-  position:relative;
   display:grid;
   grid-template-columns: 2fr 1fr;
   gap:16px;
@@ -308,3 +303,6 @@ button{
 #saveEditsBtn{ background: linear-gradient(90deg, #38d39f, #7cf0c9); color:#153a2e; }
 button:disabled{ opacity:0.75; cursor:not-allowed; }
 .hint{ font-size:13px; opacity:0.88; }
+
+.hide-on-export{display:block}
+.exporting .hide-on-export{display:none}
