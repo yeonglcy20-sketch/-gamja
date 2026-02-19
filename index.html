@@ -14,7 +14,7 @@
     <img class="potato-hero" src="assets/potato_character.svg" alt="" />
 
     <header>
-      <div class="badge">💗 LAVENDER PINK</div>
+      <div class="badge">💗 LAVENDER × PINK</div>
       <h1>🥔 감자수베지 방송 스케줄</h1>
       <p class="subtitle">감자튀김들 모여라! ✨</p>
     </header>
@@ -24,7 +24,7 @@
         <div class="card">
           <div class="card-title">이번 주 한마디</div>
           <div id="quote" class="quote" contenteditable="true" spellcheck="false">오늘도 감자 ON 🥔💜</div>
-          <div class="mini">※ 문구를 클릭해서 수정 가능</div>
+          <div class="mini">※ 문구 클릭해서 수정 가능</div>
         </div>
 
         <div class="card card-table">
@@ -32,28 +32,27 @@
             <thead>
               <tr>
                 <th>요일</th>
-                <th>시간 (수정 가능)</th>
-                <th>내용 (수정 가능)</th>
+                <th>시간 (수정)</th>
+                <th>내용 (수정)</th>
               </tr>
             </thead>
             <tbody id="schedule-body">
-              <tr><td class="day">월</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
-              <tr><td class="day">화</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
-              <tr><td class="day">수</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">종합게임 🎮</td></tr>
-              <tr><td class="day">목</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">소통 💬</td></tr>
-              <tr><td class="day">금</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
-              <tr><td class="day">토</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">랜덤 ✨</td></tr>
-              <tr><td class="day">일</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
+              <tr><td class="day">월</td><td class="editable" contenteditable="true">-</td><td class="editable" contenteditable="true">휴방</td></tr>
+              <tr><td class="day">화</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">PUBG 🔫</td></tr>
+              <tr><td class="day">수</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">종합게임 🎮</td></tr>
+              <tr><td class="day">목</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">소통 💬</td></tr>
+              <tr><td class="day">금</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">PUBG 🔫</td></tr>
+              <tr><td class="day">토</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">랜덤 ✨</td></tr>
+              <tr><td class="day">일</td><td class="editable" contenteditable="true">-</td><td class="editable" contenteditable="true">휴방</td></tr>
             </tbody>
           </table>
-          <div class="mini mini-bottom">※ 시간/내용 칸을 클릭해서 바로 수정 가능</div>
+          <div class="mini mini-bottom">※ 시간/내용 칸 클릭해서 수정 → 아래 ‘수정내용 저장’</div>
         </div>
       </div>
 
       <aside class="right">
         <div class="image-card">
           <div class="image-title">이미지</div>
-
           <div class="image-frame">
             <img id="userImage" class="user-image hidden" alt="선택한 이미지" />
             <div id="imagePlaceholder" class="image-placeholder">
@@ -61,11 +60,8 @@
               <div class="ph-text">아래에서 이미지 선택!</div>
             </div>
           </div>
-
           <div class="image-tags">
-            <span class="pill">OBS</span>
-            <span class="pill">트위터</span>
-            <span class="pill">1920×1080</span>
+            <span class="pill">OBS</span><span class="pill">트위터</span><span class="pill">1920×1080</span>
           </div>
         </div>
 
@@ -83,16 +79,11 @@
   </div>
 
   <div class="controls">
-    <label class="file">
-      이미지 선택
-      <input id="imagePicker" type="file" accept="image/*" />
-    </label>
-
+    <label class="file">이미지 선택<input id="imagePicker" type="file" accept="image/*" /></label>
     <button id="clearImageBtn" type="button">이미지 제거</button>
     <button id="saveEditsBtn" type="button">수정내용 저장</button>
     <button id="downloadBtn" type="button">JPG 저장</button>
-
-    <span class="hint">※ 표/문구 수정 후 ‘수정내용 저장’ 누르면 다음에도 유지돼요</span>
+    <span class="hint">※ 하단 잘림 방지 여백 적용 완료</span>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
