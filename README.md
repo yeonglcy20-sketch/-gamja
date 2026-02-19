@@ -1,12 +1,16 @@
-# 감자수베지 스케줄 (GitHub Pages)
+# 감자수베지 스케줄 v3 (GitHub Pages)
 
-연보라 감성 1920×1080 스케줄표 페이지 + `JPG 저장` 버튼이 포함되어 있어요.
+✅ 레이아웃: **2/3(좌) 스케줄 + 1/3(우) 이미지**  
+✅ 요일은 고정, **내용/시간은 클릭해서 수정 가능(contenteditable)**  
+✅ ‘수정내용 저장’ 버튼 → localStorage에 저장되어 다음에도 유지  
+✅ 이미지 선택(업로드) → 우측 1/3 영역에 표시  
+✅ JPG 저장 버튼(1920×1080)
 
-## 사용법
-1. 이 폴더를 GitHub 레포에 업로드
-2. Settings → Pages → Branch: `main` / 폴더: `/ (root)`
-3. Pages URL로 접속
-4. `JPG 저장` 버튼 클릭 → 1920×1080 JPG 다운로드
+## 배포
+1) 이 폴더 내용을 GitHub 레포에 업로드  
+2) Settings → Pages → Branch: main / root  
+3) Pages URL 접속
 
-## 시간표 수정
-`index.html`의 `<tbody id="schedule-body">` 안의 행만 수정하면 돼요.
+## 커스터마이즈
+- 문구: 상단 ‘이번 주 한마디’ 클릭 후 수정
+- 표: 내용/시간 칸 클릭 후 수정 → ‘수정내용 저장’
