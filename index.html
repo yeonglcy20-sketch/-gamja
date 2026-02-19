@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>감자수베지 스케줄</title>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>감자수베지 스케줄</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="capture">
-  <div class="bg-deco"></div>
-  <div class="sparkles"></div>
-  <img class="potato-hero" src="assets/potato_character.svg" alt="">
+  <div id="capture" aria-label="감자수베지 스케줄표">
+    <div class="bg-deco" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <img class="potato-hero" src="assets/potato_character.svg" alt="" />
 
-  <header class="main-header">
-    <div class="badge">💗 LAVENDER × PINK</div>
-    <h1>🥔 감자수베지 방송 스케줄</h1>
-    <p class="subtitle">감자튀김들 모여라! ✨</p>
-  </header>
+    <header>
+      <div class="badge">💗 LAVENDER × PINK</div>
+      <h1>🥔 감자수베지 방송 스케줄</h1>
+      <p class="subtitle">감자튀김들 모여라! ✨</p>
+    </header>
 
-  <section class="layout">
-    <div class="left">
-      <div class="card">
-        <div class="card-title">이번 주 한마디</div>
-        <div id="quote" class="quote" contenteditable="true">오늘도 감자 ON 🥔💜</div>
-      </div>
+    <section class="layout">
+      <div class="left">
+        <div class="card">
+          <div class="card-title">이번 주 한마디</div>
+          <div id="quote" class="quote" contenteditable="true" spellcheck="false">오늘도 감자 ON 🥔💜</div>
+          <div class="mini">※ 문구 클릭해서 수정 가능</div>
+        </div>
 
-      <div class="card card-table">
-        <table>
-          <thead>
-            <tr>
-              <th>요일</th>
-              <th>시간 (수정)</th>
-              <th>내용 (수정)</th>
-            </tr>
-          </thead>
-          <tbody id="schedule-body">
-            <tr><td class="day">월</td><td contenteditable="true">-</td><td contenteditable="true">휴방</td></tr>
-            <tr><td class="day">화</td><td contenteditable="true">21:00</td><td contenteditable="true">PUBG 🔫</td></tr>
-            <tr><td class="day">수</td><td contenteditable="true">21:00</td><td contenteditable="true">종합게임 🎮</td></tr>
-            <tr><td class="day">목</td><td contenteditable="true">21:00</td><td contenteditable="true">소통 💬</td></tr>
-            <tr><td class="day">금</td><td contenteditable="true">21:00</td><td contenteditable="true">PUBG 🔫</td></tr>
-            <tr><td class="day">토</td><td contenteditable="true">21:00</td><td contenteditable="true">랜덤 ✨</td></tr>
-            <tr><td class="day">일</td><td contenteditable="true">-</td><td contenteditable="true">휴방</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <aside class="right">
-      <div class="image-card">
-        <div class="image-title">이미지</div>
-        <div class="image-frame">
-          <img id="userImage" class="user-image hidden">
-          <div id="imagePlaceholder" class="image-placeholder">이미지 선택</div>
+        <div class="card card-table">
+          <table>
+            <thead>
+              <tr>
+                <th>요일</th>
+                <th>시간 (수정)</th>
+                <th>내용 (수정)</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+              <tr><td class="day">월</td><td class="editable" contenteditable="true">-</td><td class="editable" contenteditable="true">휴방</td></tr>
+              <tr><td class="day">화</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">PUBG 🔫</td></tr>
+              <tr><td class="day">수</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">종합게임 🎮</td></tr>
+              <tr><td class="day">목</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">소통 💬</td></tr>
+              <tr><td class="day">금</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">PUBG 🔫</td></tr>
+              <tr><td class="day">토</td><td class="editable" contenteditable="true">21:00</td><td class="editable" contenteditable="true">랜덤 ✨</td></tr>
+              <tr><td class="day">일</td><td class="editable" contenteditable="true">-</td><td class="editable" contenteditable="true">휴방</td></tr>
+            </tbody>
+          </table>
+          <div class="mini mini-bottom">※ 시간/내용 칸 클릭해서 수정 → 아래 ‘수정내용 저장’</div>
         </div>
       </div>
-    </aside>
-  </section>
-</div>
 
-<div class="controls">
-  <label class="file">이미지 선택<input id="imagePicker" type="file" accept="image/*"></label>
-  <button id="downloadBtn">JPG 저장</button>
-</div>
+      <aside class="right">
+        <div class="image-card">
+          <div class="image-title">이미지</div>
+          <div class="image-frame">
+            <img id="userImage" class="user-image hidden" alt="선택한 이미지" />
+            <div id="imagePlaceholder" class="image-placeholder">
+              <div class="ph-emoji">🖼️</div>
+              <div class="ph-text">아래에서 이미지 선택!</div>
+            </div>
+          </div>
+          <div class="image-tags">
+            <span class="pill">OBS</span><span class="pill">트위터</span><span class="pill">1920×1080</span>
+          </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script src="script.js"></script>
+        <div class="tag-card">
+          <div class="tag-title">해시태그</div>
+          <div class="tag-row">
+            <span class="tag">#감자</span>
+            <span class="tag">#감자수베지</span>
+            <span class="tag">#감자튀김</span>
+            <span class="tag">#밤방송</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <div class="controls">
+    <label class="file">이미지 선택<input id="imagePicker" type="file" accept="image/*" /></label>
+    <button id="clearImageBtn" type="button">이미지 제거</button>
+    <button id="saveEditsBtn" type="button">수정내용 저장</button>
+    <button id="downloadBtn" type="button">JPG 저장</button>
+    <span class="hint">※ 하단 잘림 방지 여백 적용 완료</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
