@@ -427,3 +427,9 @@ button:disabled{
   z-index:1;
 }
 
+
+/* table header gradient override */
+thead th{
+  background: linear-gradient(90deg, #e6dcff 0%, #ffcfe8 100%) !important;
+  color:#ffffff;
+}
