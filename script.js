@@ -88,6 +88,7 @@ downloadBtn.addEventListener("click", async ()=>{
     a.href=canvas.toDataURL("image/jpeg",0.95);
     a.click();
     document.body.classList.remove("exporting");
+    target.classList.remove("exporting");
   } finally {
     downloadBtn.disabled=false;
     downloadBtn.textContent="JPG 저장";

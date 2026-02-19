@@ -89,6 +89,7 @@ body{
 }
 
 header{
+  margin-top:38px;
   z-index:50;
   position:relative;
   text-align:center;
@@ -314,3 +315,13 @@ button:disabled{ opacity:0.75; cursor:not-allowed; }
 
 /* extra safe zone */
 .top-safe{height:20px}
+
+/* Export safety: html2canvas may render gradient text as transparent */
+.exporting h1{
+  background:none !important;
+  color:#6f58c9 !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color:#6f58c9 !important;
+  text-shadow:none !important;
+}
