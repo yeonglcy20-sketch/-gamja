@@ -430,6 +430,12 @@ button:disabled{
 
 /* table header gradient override */
 thead th{
-  background: linear-gradient(90deg, #e6dcff 0%, #ffcfe8 100%) !important;
+  background: transparent !important;
+
   color:#ffffff;
+}
+
+/* unified table header gradient */
+thead tr{
+  background: linear-gradient(90deg, #e6dcff 0%, #ffcfe8 100%);
 }
