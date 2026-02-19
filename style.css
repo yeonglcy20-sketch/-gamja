@@ -15,7 +15,7 @@
 
 body{
   margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  font-family:"Cute Font","Gowun Dodum", system-ui, sans-serif;
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -37,7 +37,7 @@ body{
   position:relative;
   border-radius:30px;
   overflow:hidden;
-  padding:58px 78px 98px;
+  padding:56px 78px 130px;
   background:
     radial-gradient(1000px 600px at 30% 20%, #ffffffcc, transparent 58%),
     radial-gradient(900px 520px at 76% 82%, #ffffff88, transparent 62%),
@@ -64,9 +64,9 @@ body{
 .potato-hero{
   position:absolute;
   right:-36px;
-  bottom:-10px;
-  width:410px;
-  height:410px;
+  bottom:0px;
+  width:390px;
+  height:390px;
   opacity:0.95;
   transform: rotate(6deg);
   pointer-events:none;
@@ -100,7 +100,7 @@ header{
 
 h1{
   margin:0;
-  font-size:58px;
+  font-size:56px;
   letter-spacing:-1px;
   color:var(--primary);
   text-shadow: 0 10px 24px rgba(106,76,255,0.20);
@@ -108,7 +108,7 @@ h1{
 
 .subtitle{
   margin:12px 0 0;
-  font-size:26px;
+  font-size:25px;
   color:var(--primary2);
 }
 
