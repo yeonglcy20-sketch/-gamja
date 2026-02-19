@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>감자수베지 스케줄</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="capture">
+  <div class="bg-deco"></div>
+  <img class="potato-hero" src="assets/potato_character.svg" alt="" />
+
+  <header>
+    <h1>🥔 감자수베지 방송 스케줄</h1>
+    <p class="subtitle">감자튀김들 모여라! ✨</p>
+  </header>
+
+  <section class="layout">
+    <div class="left">
+      <div class="card">
+        <div id="quote" contenteditable="true">오늘도 감자 ON 🥔💜</div>
+      </div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>요일</th>
+              <th>시간</th>
+              <th>내용</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-body">
+            <tr><td class="day">월</td><td contenteditable="true">-</td><td contenteditable="true">휴방</td></tr>
+            <tr><td class="day">화</td><td contenteditable="true">21:00</td><td contenteditable="true">PUBG</td></tr>
+            <tr><td class="day">수</td><td contenteditable="true">21:00</td><td contenteditable="true">종합게임</td></tr>
+            <tr><td class="day">목</td><td contenteditable="true">21:00</td><td contenteditable="true">소통</td></tr>
+            <tr><td class="day">금</td><td contenteditable="true">21:00</td><td contenteditable="true">PUBG</td></tr>
+            <tr><td class="day">토</td><td contenteditable="true">21:00</td><td contenteditable="true">랜덤</td></tr>
+            <tr><td class="day">일</td><td contenteditable="true">-</td><td contenteditable="true">휴방</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="right">
+      <div class="image-frame">
+        <img id="userImage" class="hidden" />
+        <div id="imagePlaceholder">이미지 선택</div>
+      </div>
+    </aside>
+  </section>
+</div>
+
+<div class="controls">
+  <label class="file">이미지 선택<input id="imagePicker" type="file" accept="image/*" /></label>
+  <button id="downloadBtn">JPG 저장</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
