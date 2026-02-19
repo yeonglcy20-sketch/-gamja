@@ -47,9 +47,9 @@ function readSchedule(){
   return rows.map(r => {
     const day = r.querySelector("td.day")?.textContent?.trim() ?? "";
     const tds = r.querySelectorAll("td");
-    const content = tds[1]?.textContent?.trim() ?? "";
-    const time = tds[2]?.textContent?.trim() ?? "";
-    return { day, content, time };
+    const time = tds[1]?.textContent?.trim() ?? "";
+    const content = tds[2]?.textContent?.trim() ?? "";
+    return { day, time, content };
   });
 }
 
@@ -63,8 +63,8 @@ function applySchedule(data){
     const item = byDay.get(day);
     if(!item) continue;
     const tds = r.querySelectorAll("td");
-    if(tds[1]) tds[1].textContent = item.content ?? "";
-    if(tds[2]) tds[2].textContent = item.time ?? "";
+    if(tds[1]) tds[1].textContent = item.time ?? "";
+    if(tds[2]) tds[2].textContent = item.content ?? "";
   }
 }
 

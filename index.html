@@ -1,133 +1,94 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>감자수베지 스케줄</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>감자수베지 스케줄</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- 캡처 대상(1920x1080) -->
-  <div id="capture" aria-label="감자수베지 스케줄표">
-    <div class="bg-deco" aria-hidden="true"></div>
-    <img class="potato-hero" src="assets/potato_character.svg" alt="" />
-
-    <header>
-      <h1>🥔 감자수베지 방송 스케줄</h1>
-      <p class="subtitle">감자튀김들 모여라! ✨</p>
-    </header>
-
-    <!-- 2/3 : 1/3 레이아웃 -->
-    <section class="layout">
-      <!-- LEFT (2/3) -->
-      <div class="left">
-        <div class="card">
-          <div class="card-title">이번 주 한마디</div>
-          <div id="quote" class="quote" contenteditable="true" spellcheck="false">오늘도 감자 ON 🥔💜</div>
-          <div class="mini">※ 문구를 클릭해서 수정 가능</div>
-        </div>
-
-        <div class="card card-table">
-          <table>
-            <thead>
-              <tr>
-                <th>요일</th>
-                <th>내용 (수정 가능)</th>
-                <th>시간 (수정 가능)</th>
-              </tr>
-            </thead>
-            <tbody id="schedule-body">
-              <!-- 요일은 고정, 내용/시간만 수정 -->
-              <tr>
-                <td class="day">월</td>
-                <td class="editable" contenteditable="true" spellcheck="false">휴방</td>
-                <td class="editable" contenteditable="true" spellcheck="false">-</td>
-              </tr>
-              <tr>
-                <td class="day">화</td>
-                <td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">수</td>
-                <td class="editable" contenteditable="true" spellcheck="false">종합게임 🎮</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">목</td>
-                <td class="editable" contenteditable="true" spellcheck="false">소통 💬</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">금</td>
-                <td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">토</td>
-                <td class="editable" contenteditable="true" spellcheck="false">랜덤 ✨</td>
-                <td class="editable" contenteditable="true" spellcheck="false">21:00</td>
-              </tr>
-              <tr>
-                <td class="day">일</td>
-                <td class="editable" contenteditable="true" spellcheck="false">휴방</td>
-                <td class="editable" contenteditable="true" spellcheck="false">-</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="mini mini-bottom hide-on-export">※ 내용/시간 칸을 클릭해서 바로 수정 가능</div>
-        </div>
-      </div>
-
-      <!-- RIGHT (1/3) -->
-      <aside class="right">
-        <div class="image-card">
-          <div class="image-title">이미지</div>
-
-          <div class="image-frame">
-            <img id="userImage" class="user-image hidden" alt="선택한 이미지" />
-            <div id="imagePlaceholder" class="image-placeholder">
-              <div class="ph-emoji">🖼️</div>
-              <div class="ph-text">아래에서 이미지 선택!</div>
-            </div>
-          </div>
-
-          <div class="image-tags">
-            <span class="pill">OBS</span>
-            <span class="pill">트위터</span>
-            <span class="pill">1920×1080</span>
-          </div>
-        </div>
-
-        <div class="tag-card">
-          <div class="tag-title">해시태그</div>
-          <div class="tag-row">
-            <span class="tag">#감자</span>
-            <span class="tag">#감자수베지</span>
-            <span class="tag">#감자튀김</span>
-            <span class="tag">#밤방송</span>
-          </div>
-        </div>
-      </aside>
-    </section>
-  </div>
-
-  <!-- 컨트롤(캡처 제외) -->
-  <div class="controls">
-    <label class="file">
+<!-- 캡처 대상(1920x1080) -->
+<div aria-label="감자수베지 스케줄표" id="capture">
+<div aria-hidden="true" class="bg-deco"></div>
+<img alt="" class="potato-hero" src="assets/potato_character.svg"/>
+<header>
+<h1>🥔 감자수베지 방송 스케줄</h1>
+<p class="subtitle">감자튀김들 모여라! ✨</p>
+</header>
+<!-- 2/3 : 1/3 레이아웃 -->
+<section class="layout">
+<!-- LEFT (2/3) -->
+<div class="left">
+<div class="card">
+<div class="card-title">이번 주 한마디</div>
+<div class="quote" contenteditable="true" id="quote" spellcheck="false">오늘도 감자 ON 🥔💜</div>
+<div class="mini">※ 문구를 클릭해서 수정 가능</div>
+</div>
+<div class="card card-table">
+<table>
+<thead>
+<tr>
+<th>요일</th>
+<th>시간 (수정 가능)</th>
+<th>내용 (수정 가능)</th>
+</tr>
+</thead>
+<tbody id="schedule-body">
+<!-- 요일은 고정, 내용/시간만 수정 -->
+<tr><td class="day">월</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
+<tr><td class="day">화</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
+<tr><td class="day">수</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">종합게임 🎮</td></tr>
+<tr><td class="day">목</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">소통 💬</td></tr>
+<tr><td class="day">금</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">PUBG 🔫</td></tr>
+<tr><td class="day">토</td><td class="editable" contenteditable="true" spellcheck="false">21:00</td><td class="editable" contenteditable="true" spellcheck="false">랜덤 ✨</td></tr>
+<tr><td class="day">일</td><td class="editable" contenteditable="true" spellcheck="false">-</td><td class="editable" contenteditable="true" spellcheck="false">휴방</td></tr>
+</tbody>
+</table>
+<div class="mini mini-bottom hide-on-export">※ 내용/시간 칸을 클릭해서 바로 수정 가능</div>
+</div>
+</div>
+<!-- RIGHT (1/3) -->
+<aside class="right">
+<div class="image-card">
+<div class="image-title">이미지</div>
+<div class="image-frame">
+<img alt="선택한 이미지" class="user-image hidden" id="userImage"/>
+<div class="image-placeholder" id="imagePlaceholder">
+<div class="ph-emoji">🖼️</div>
+<div class="ph-text">아래에서 이미지 선택!</div>
+</div>
+</div>
+<div class="image-tags">
+<span class="pill">OBS</span>
+<span class="pill">트위터</span>
+<span class="pill">1920×1080</span>
+</div>
+</div>
+<div class="tag-card">
+<div class="tag-title">해시태그</div>
+<div class="tag-row">
+<span class="tag">#감자</span>
+<span class="tag">#감자수베지</span>
+<span class="tag">#감자튀김</span>
+<span class="tag">#밤방송</span>
+</div>
+</div>
+</aside>
+</section>
+</div>
+<!-- 컨트롤(캡처 제외) -->
+<div class="controls">
+<label class="file">
       이미지 선택
-      <input id="imagePicker" type="file" accept="image/*" />
-    </label>
-
-    <button id="clearImageBtn" type="button">이미지 제거</button>
-    <button id="saveEditsBtn" type="button">수정내용 저장</button>
-    <button id="downloadBtn" type="button">JPG 저장</button>
-
-    <span class="hint">※ 표/문구 수정 후 ‘수정내용 저장’ 누르면 다음에도 유지돼요</span>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+      <input accept="image/*" id="imagePicker" type="file"/>
+</label>
+<button id="clearImageBtn" type="button">이미지 제거</button>
+<button id="saveEditsBtn" type="button">수정내용 저장</button>
+<button id="downloadBtn" type="button">JPG 저장</button>
+<span class="hint">※ 표/문구 수정 후 ‘수정내용 저장’ 누르면 다음에도 유지돼요</span>
+</div>
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
