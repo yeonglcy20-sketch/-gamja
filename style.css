@@ -27,7 +27,7 @@ body{
     radial-gradient(900px 520px at 12% 10%, #ffffffcc, transparent 60%),
     radial-gradient(700px 450px at 88% 18%, #ffffff99, transparent 55%),
     radial-gradient(650px 420px at 70% 92%, #ffffff88, transparent 60%),
-    linear-gradient(135deg, var(--bg1), var(--bg2) 55%, var(--bg3));
+    linear-gradient(90deg, #e9e2ff 0%, #f3d9ff 45%, #ffd6ec 100%), var(--bg2) 55%, var(--bg3));
 }
 
 /* 캡처 영역 */
@@ -427,15 +427,3 @@ button:disabled{
   z-index:1;
 }
 
-/* header glossy shine */
-thead th{
-  position:relative;
-  overflow:hidden;
-}
-thead th::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg, rgba(255,255,255,0.35), transparent 40%);
-  pointer-events:none;
-}
